@@ -1,67 +1,125 @@
-<!DOCTYPE html>
+<!doctype html>
+<html lang="en">
 
 <head>
-<style>
-/* set the CSS */
-.axis path,
-.axis line {
-    fill: none;
-    stroke: grey;
-    stroke-width: 1;
-    shape-rendering: crispEdges;
-}
-</style>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Banking Union - European banking regulation</title>
+  <link href='https://fonts.googleapis.com/css?family=Karla:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Slabo+27px' rel='stylesheet' type='text/css'>
+  <link rel="canonical" href="http://bankingunion.eu/"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="The European Banking Union is a project under construction and its ultimate goal is to gather and structure banking union-related documents, from legislative acts to research papers, while fostering the debate on those issues that are unfinished.">
+  <link rel="stylesheet" type="text/css" href="index.css">
+  <link rel="stylesheet" media="screen and (max-width: 415px)" href="indexsmall.css">
 
-<link rel="stylesheet"  href="css/main.css">
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
+  ga('create', 'UA-71565805-1', 'auto');
+  ga('send', 'pageview');
+</script>
 <script src="http://d3js.org/d3.v3.min.js"></script>
 <script src="http://d3js.org/topojson.v1.min.js"></script>
+
+<style>
+  /* set the CSS */
+  .axis path,
+  .axis line {
+      fill: white;
+      stroke: grey;
+      stroke-width: 1;
+      shape-rendering: crispEdges;
+  }
+
+  .tooltip{ 
+    color: #222;
+    font-family: 'Merriweather', serif;
+    background-color: #fff;
+    padding: .5em;
+    text-shadow: #f5f5f5 0 1px 0;
+    border-radius: 2px;
+    opacity: 0.9;  
+    position: absolute;
+  }
+
+  .features:hover {
+      fill: #666;
+  }
+</style>
+
 
 </head>
 
 <body>
+  <nav class="stroke">
+    <ul1>
+      <h1><a href ="/">bankingunion_eu</a></h1>
+    </ul1>
+    <ul2><a href="https://twitter.com/bankingunion_eu" target="_blank"><img src="http://s28.postimg.org/szodgolrd/Untitled.png" alt="Twitter account bankingunion.eu" style="width:80px;height:60px;"></a></ul2>
+    <ul3>
+      <li><a href="/">index<sub>1</sub></a></li>
+      <li><a href="/previous/">previous<sub>2</sub></a></li>
+      <li><a href="/about/">about<sub>3</sub></a></li>
+    </ul3>
+  </nav>
+  
+  <article> 
+    <div class="prev"><span2 class="highlight"> C:\bankingunion_eu\previous\christopher_gandrud.js</span2></div>
+    <div class="title_post">EU Banking Regulation Interactive Map<br><span class="highlight"><i>Text texttext texttext texttext <br>btexttexttexttexttexttexttexttexttexttext<br></i></span></div>
 
-<h1>European Union Banking Integration Map Test</h1>
+    <div class="info">
+      <div class="author">by Christopher Gandrud <a class="authory" href="https://twitter.com/chrisgandrud" target="_blank">(@ChrisGandrud)</a> & Arturo Pallardó <a class="authory" href="https://twitter.com/bankingunion_eu" target="_blank">(@bankingunion_eu)</a> | 02.01.2016</div>
+      <div class="socialmedia"><a href="https://twitter.com/share" class="twitter-share-button" data-text="Georg Ringe (@georgringe) on bail-in, single point of entry strategy (SPOE) and more |" data-url="http://www.bankingunion.eu" data-via="BankingUnion_eu">Tweet</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></div>
+    </div>
+    
+    <div class="content">
+      
+      
+      <div id="basic_map">
+          <script src="js/basic_membership_map.js"></script>
+     </div>
 
+      <p>European bank regulatory integration consists of two groups of countries. The first are countries that have signed on to all of the provisions of what is know as the Banking Union. They have their largest banks supervised by the ECB under the Single Supervisory Mechanism (SSM). Bank failures for these banks (and other banks that the ECB deems to be systemically important) are managed under the Single Resolution Mechanism (SRM). These countries are also part of the European Stability Mechanism (ESM). Currently, only Eurozone members are in the full Banking Union.</p>
 
-<div id="basic_map">
-    <script src="js/basic_membership_map.js"></script>
-</div>
+      <p>Other countries in the EU still have integrated their bank regulatory systems to a less, but still important degree. These countries interact with the Eurpean Banking Authority (EBA) and resolution of their failed banks is done under the Banking Recovery and Resolution Directive (BRRD).</p><br>
+      <p>GROUP 1: BANKING UNION (SSM,SRM,...) + ESM + ... + GROUP 2
 
-<p>European bank regulatory integration consists of two groups of countries. The first are countries that have signed on to all of the provisions of what is know as the Banking Union. They have their largest banks supervised by the ECB under the Single Supervisory Mechanism (SSM). Bank failures for these banks (and other banks that the ECB deems to be systemically important) are managed under the Single Resolution Mechanism (SRM). These countries are also part of the European Stability Mechanism (ESM). Currently, only Eurozone members are in the full Banking Union.</p>
-
-<p>Other countries in the EU still have integrated their bank regulatory systems to a less, but still important degree. These countries interact with the Eurpean Banking Authority (EBA) and resolution of their failed banks is done under the Banking Recovery and Resolution Directive (BRRD).</p>
-
-<br>
-<p>GROUP 1: BANKING UNION (SSM,SRM,...) + ESM + ... + GROUP 2
-
-<p>GROUP 2
-	<ul>
-		<li>Institutional arrangements
-		  <ul>
-			<li>European System of Financial Supervision (ESFS)
-			  <ul>
-				<li>European Banking Authority (EBA)</li>
-				<li>Joint Committee of the European Supervisory Authorities</li>
-				<li>European Systemic Risk Board (ESRB)</li>
-			  </ul>
-			</li>
-		  </ul>
-		<li>Legislation
-		  <ul>
-		    <ul>
-			  <li>CRR or Capital Requirements Regulation</li>
-			  <li>CRD IV or Capital Requirements Directive IV</li>
-			  <li>BRRD or the Bank Recovery and Resolution Directive</li>
-			  <li>FICOD or Financial Conglomerates Directive</li>
-			  <li>Regulation on Information of Transfer of Funds/li>
-			  <li>DGS or Deposit Guarantee Schemes Directive</li>
-			</ul>
-		  </ul>
-		</li>
-	</ul>
-</p>
-
-
+      <p>GROUP 2
+        <ul>
+          <li>Institutional arrangements
+            <ul>
+            <li>European System of Financial Supervision (ESFS)
+              <ul>
+              <li>European Banking Authority (EBA)</li>
+              <li>Joint Committee of the European Supervisory Authorities</li>
+              <li>European Systemic Risk Board (ESRB)</li>
+              </ul>
+            </li>
+            </ul>
+          <li>Legislation
+            <ul>
+              <ul>
+              <li>CRR or Capital Requirements Regulation</li>
+              <li>CRD IV or Capital Requirements Directive IV</li>
+              <li>BRRD or the Bank Recovery and Resolution Directive</li>
+              <li>FICOD or Financial Conglomerates Directive</li>
+              <li>Regulation on Information of Transfer of Funds/li>
+              <li>DGS or Deposit Guarantee Schemes Directive</li>
+            </ul>
+            </ul>
+          </li>
+        </ul>
+      </p>
+        </article>
+      <div class="foot">
+        <div class="down">beta version</div>
+        <div class="down"><a href="https://twitter.com/bankingunion_eu" target="_blank">twitter</a></div>
+        <div class="down"><a href="/about">about</a></li></div>
+      </div>
 </body>
-</html>
