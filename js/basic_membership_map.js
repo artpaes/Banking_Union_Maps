@@ -89,7 +89,7 @@ d3.json("json/europeClean.json", function(error, europe) {
                 console.log(lookup[d.id])
                 tooltip.transition()
                   .duration(100)
-                  .style("opacity", .9);
+                  .style("opacity", 0.9);
                 tooltip.html(lookup[d.id].country)
                   .style("left", (d3.event.pageX) + "px")
                   .style("top", (d3.event.pageY) + "px")
