@@ -20,7 +20,10 @@ var tooltip = d3.select("body")
 
 var color = d3.scale.ordinal()
     .domain(["", "EEA/Other", "EU Non-SSM", "SSM"])
-    .range(["#fff", "#c6dbef", "#6baed6", "#3182bd"]);
+    .range(["#fff", "#E4BBC0", "#DAD5E5", "#6C8BB2"]);
+
+// Previous Colors
+// .range(["#fff", "#c6dbef", "#6baed6", "#3182bd"]);
 
 var path = d3.geo.path()
     .projection(projection);
@@ -92,9 +95,15 @@ d3.json("json/europeClean.json", function(error, europe) {
                   .style("opacity", 0.9);
                 tooltip.html(lookup[d.id].country)
                   .style("left", (d3.event.pageX) + "px")
-                  .style("top", (d3.event.pageY) + "px")
-                  ;
-              });
+                  .style("top", (d3.event.pageY) + "px");
+                d3.select(this).style("opacity", 0.9);
+            })
+            .on("mouseout", function() {
+                d3.select(this)
+                .transition().duration(300)
+                .style("opacity", 1);
+            })
+
             
     });
 });
